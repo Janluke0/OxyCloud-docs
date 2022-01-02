@@ -9,11 +9,11 @@
 |[downloadDoc](docs/id/get.md)    |`/docs/:id`  |GET     |
 |[renameDoc](docs/id/post.md)     |`/docs/:id`  |POST    |
 |[deleteDoc](docs/id/delete.md)   |`/docs/:id`  |DELETE  |
-|
+|                                                        |
 |[listShared](share/get.md)       |`/share`     |GET     |
 |[shareDoc](share/id/post.md)     |`/share/:id` |POST    |
 |[UnshareDoc](share/id/delete.md) |`/share/:id` |DELETE  |
-|
+|                                                        |
 |[searchUsers](users/get.md)      |`/users`     |GET     |
 |[getUser](users/id/get.md)       |`/users/:id` |GET     |
 
