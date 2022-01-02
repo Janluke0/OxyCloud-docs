@@ -44,3 +44,9 @@
 |-----------|-----------------------|--------|
 |id         |the unique id          |    uuid|
 |email      |the user's mail        |  string|
+
+### Authorization
+
+Tokens are obtained from cognito endpoint using the supplied `client_id` and the `USER_PASSWORD_AUTH` and `REFRESH_TOKEN_AUTH` *AuthFlow* of the `InitAuth` method.
+
+*Identity token* must be included in the `Authorization` header of the requests where authorization is required.
