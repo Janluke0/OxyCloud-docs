@@ -18,7 +18,6 @@ Given the file-id, if the file exist and the user is the owner, move the file to
 |doom   |dl permantly?|   bool| url parm| false  | no     |
 
 ### Response
-**THIS IS HOW IT SHOULD BE ===> FIXME**
 #### Scheme
 *success:*
 ```

@@ -20,7 +20,7 @@ Given the begin of the email return all users that match
 #### Scheme
 *success:*
 ```json
-[]File
+[]User
 ```
 *error:*
 ```json

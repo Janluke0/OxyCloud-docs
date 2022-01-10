@@ -18,8 +18,6 @@ Given the file-id, if the file exist and the user is the owner, rename the file
 |filename |new file name| string| url parm|        | yes    |
 
 ### Response
-
-**THIS IS HOW IT SHOULD BE ===> FIXME**
 #### Scheme
 *success:*
 ```
