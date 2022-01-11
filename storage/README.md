@@ -1,0 +1,8 @@
+# Storage
+
+For the file storage we employed the **AWS S3** service. 
+
+Because of the *payload size limitations* imposed by **API Gateway**, we could not simply integrate the service as a *API Gateway service integration* for the *upload file* action. *API Gateway* in fact, limits the payload size to just 10MB which is obviously not enough in a modern web app that provides a cloud storage service.<br>
+ To solve the problem we first decided to put behind the *upload* endpoint *(PUT /docs)* of *API Gateway* an **AWS Step function** that simply checks the payload size and if that is less than 10MB, proceeds with the direct S3 upload, otherwise a Lambda function that generates a pre-signed S3 upload URL gets invoked and the URL is returned to the client through *API Gateway* to be used. Because of the **AWS Educate** account limitations we could not use the *AWS Step functions* so we removed the direct S3 upload option and we decided to invoke the S3 Upload URL generator Lambda for any payload size.
+
+ In any case, after an object is uploaded in the S3 bucket, the *createObject* event emitted by the bucket is used to trigger the *upload-file-trigger* that extracts file metadata from the event and writes a record containing that information in the DynamoDB User's files table. The function also modifies the *Users* DynamoDB table by updating the corresponding User's *used_space* attribute which is checked every time a user attempts to upload a file.
