@@ -31,3 +31,5 @@
 ```json
 {}
 ```
+
+**A file can be shared only with a user present in the User Pool (sharable only with other OxyCloud users)**
